@@ -41,6 +41,23 @@
     });
   </script>
 
+  <script>
+    $(function() {
+
+    var tabs =  $(".tabs li a");
+
+    tabs.click(function() {
+      var content = this.hash.replace('/','');
+      tabs.removeClass("active");
+      $(this).addClass("active");
+      $("#content").find('div').hide();
+      $(content).fadeIn(200);
+    });
+
+    });
+
+  </script>
+
   <!--
     <div class="p-1 bd-highlight" style="color:white">
       <a class="nav-link" style="color:white" href="#">HOME</a>
@@ -235,13 +252,73 @@
         <h3 style="font-size: 35px; font-weight: 600; font-family: 'Montserrat', Arial, serif; margin-bottom: 60px;">My Experience</h3>
       </div>
 
-      <div class="row justify-content-between">
-        <div class="col-md-2">
-          <div style="background-color:orange;">Deloitte</div>
+    <div class="row justify-content-center">
+      <div class="col-md-2">
+        <ul class="tabs group">
+          <li><a class="active" href="#/one">Deloitte</a></li>
+          <li><a href="#/two">KBTG</a></li>
+          <li><a href="#/three">BOT</a></li>
+          <li><a href="#/four">Thammasat U.</a></li>
+        </ul>
+      </div>  
+
+      <div class="col-md-6">  
+        <div id="content">
+          <div style="color: #ffffff; line-height: 26px; font-size: 18px; margin: 0;" id="one">
+            <h3 style="margin-bottom: 5px;">Audit Analyst</h3>
+            <p style="font-size: 15px;">Sep 2019 - Present</p>
+            <ul>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+            </ul>
+          </div>
+          <div style="color: #ffffff; line-height: 26px; font-size: 18px; margin: 0;" id="two">
+            <h3 style="margin-bottom: 5px;">Data Science Intern</h3>
+            <p style="font-size: 15px;">June 2019 - July 2019</p>
+            <ul>
+              <li style="">Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+            </ul>
+          </div>
+          <div style="color: #ffffff; line-height: 26px; font-size: 18px; margin: 0;" id="three">
+            <h3 style="margin-bottom: 5px;">Data Analyst Intern</h3>
+            <p style="font-size: 15px;">June 2018 - July 2018</p>
+            <ul>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+            </ul>
+          </div>
+          <div style="color: #ffffff; line-height: 26px; font-size: 18px; margin: 0;" id="four">
+            <h3 style="margin-bottom: 5px;">Audit Analyst</h3>
+            <p style="font-size: 15px;">Sep 2019 - Present</p>
+            <ul>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+              <li>Some text about Light sit amet, consectetur adipisicing elit. Pariatur modi quod quo iure recusandae eligendi q.t, consectetur adipisicing elit. Pariatur </li>
+            </ul>
+          </div>    
+          
         </div>
-      </div>
+      </div> 
+    </div>  
+     
+      
     </div>
-  </div>  
+        <!--
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary text-left">Deloitte</button>
+            <button type="button" class="btn btn-primary text-left">KBTG</button>
+            <button type="button" class="btn btn-primary text-left">BOT</button>
+          </div>
+        
+        <div class="col-md-6">
+          <div style="background-color:paleturquoise;">
+            <h3>Audit Analyst</h3>
+          </div>
+        -->  
+
+
+  </div>
+  
 </body>
 
 </html>
