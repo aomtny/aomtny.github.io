@@ -57,12 +57,12 @@ a.nav-link:active { color:#80ced6; }  */
     background-color: white;
 }
 
-li a.nav-link {
+/* nav a.nav-link {
     color: white;
     letter-spacing: 0.15em;
-}
+} */
 
-li a.nav-link.scrolled {
+nav a.nav-link.scrolled {
     color: black;
 }
 
@@ -91,11 +91,33 @@ li a.nav-link:hover {
 
 .banner h1 {
     font-family: 'Montserrat', Arial, serif; 
-    letter-spacing: 0.18em; 
-    font-size: 55px;
+    letter-spacing: 0.13em; 
+    font-size: 16px;
     font-weight: 700;
+
     
 }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    nav.navbar {padding-top: 1.2rem; }
+
+
+    /* .banner h1 { font-size: 16px; } */
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .navbar {padding-top: 1.5rem !important; }
+    .banner h1 { font-size: 1.5em; }  
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .navbar { padding-top: 1.75rem;}
+    .banner h1 {font-size: 55px;}  
+    .banner p {font-size: 20px;}
+ }
+ 
 
 .banner p { 
     margin-top: 0;
@@ -128,7 +150,8 @@ li a.nav-link:hover {
 .myprojects a:hover {
     text-decoration: none;
     color: white;
-}    
+}
+
 
 
 
